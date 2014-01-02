@@ -83,6 +83,7 @@ requirejs.config( {
         }
     },
     paths: {
+        'mangrove-utils': '.',
         almond: 'bower_components/almond/almond',
         chai: 'bower_components/chai/chai',
         'chai-as-promised': 'bower_components/chai-as-promised/lib/chai-as-promised',

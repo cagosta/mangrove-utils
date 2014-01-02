@@ -8,7 +8,7 @@ var Releaser = function( o ) {
     } )
 
     this.grunt.config.set( 'bump.options', {
-        files: [ 'package.json', 'bower.json', 'app/mangrove-utils.js' ],
+        files: [ 'package.json', 'bower.json', 'app/mangrove-utils.js', 'dist' ],
         updateConfigs: [ 'config' ],
         commit: true,
         commitMessage: 'Releasing v%VERSION%',
