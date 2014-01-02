@@ -14,6 +14,7 @@ requirejs.config( {
     paths: {
         'mangrove-utils': '.',
         test: '../test',
+        'Array.nocomplex': 'bower_components/Array.nocomplex/app',
         almond: 'bower_components/almond/almond',
         chai: 'bower_components/chai/chai',
         'chai-as-promised': 'bower_components/chai-as-promised/lib/chai-as-promised',

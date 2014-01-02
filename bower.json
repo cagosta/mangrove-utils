@@ -1,6 +1,9 @@
 {
     "name": "mangrove-utils",
     "version": "0.0.4",
+    "main": [
+        "app"
+    ],
     "licenses": [
         {
             "type": "MIT"
@@ -10,7 +13,6 @@
         "requirejs": "~2.1.9",
         "requirejs-plugins": "~1.0.2"
     },
-    "main": "app/mangrove-utils.js",
     "devDependencies": {
         "sinonjs": "~1.7.3",
         "chai": "~1.8.1",
