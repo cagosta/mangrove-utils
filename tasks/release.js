@@ -7,12 +7,13 @@ var Releaser = function( o ) {
         command: 'npm publish'
     } )
 
+
     this.grunt.config.set( 'bump.options', {
-        files: [ 'package.json', 'bower.json', 'app/mangrove-utils.js', 'dist' ],
+        files: [ 'package.json', 'bower.json', 'app/mangrove-utils.js' ],
         updateConfigs: [ 'config' ],
         commit: true,
         commitMessage: 'Releasing v%VERSION%',
-        commitFiles: [ 'package.json', 'bower.json' ], // '-a' for all files
+        commitFiles: [ 'package.json', 'bower.json', 'app/mangrove-utils.js', 'dist' ], // '-a' for all files
         createTag: true,
         tagName: 'v%VERSION%',
         tagMessage: 'Version %VERSION%',
@@ -29,12 +30,12 @@ Releaser.prototype = {
     run: function() {
         this.runBumpVersion()
         this.runBuildAndTests()
+        this.grunt.task.run( [ 'git:add_dist' ] )
         this.push()
     },
 
     runBumpVersion: function() {
         this.grunt.task.run( [ 'bump-only' + this.gruntOptions ] )
-
     },
 
     runBuildAndTests: function() {

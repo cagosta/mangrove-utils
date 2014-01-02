@@ -14,6 +14,15 @@ module.exports = function( grunt ) {
 
     } )
 
+
+    grunt.config.set( 'exec.git_add_dist', function() {
+
+        command: 'git add dist'
+
+    } )
+
+    grunt.registerTask( ' git:add_dist', [ 'exec:git_add_dist' ] )
+
     grunt.registerTask( 'git:push_set_upstream', function() {
 
         grunt.config.set( 'exec.git_set_upstream', {
