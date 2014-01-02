@@ -640,7 +640,7 @@ define( 'mangrove-utils/treeValue',[],function() {
 
 } );
 /**
- * mangrove-utils version: "0.0.1" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
+ * mangrove-utils version: "0.0.3" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
  * Available via the MIT license.
  * see: http://github.com/cagosta/mangrove-utils for details
  */
