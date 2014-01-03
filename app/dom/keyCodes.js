@@ -1,4 +1,4 @@
-define(['dom/keyCodes'], function(){
+define(function(){
 
     return {
     	backspace:		8,

@@ -102,7 +102,9 @@ requirejs.config( {
         'Markdown.Converter': 'bower_components/requirejs-plugins/lib/Markdown.Converter',
         text: 'bower_components/requirejs-plugins/lib/text',
         'sinon-chai': 'bower_components/sinon-chai/lib/sinon-chai',
-        sinonjs: 'bower_components/sinonjs/sinon'
+        sinonjs: 'bower_components/sinonjs/sinon',
+        ifEngineIsNode: 'bower_components/engineDetector/app/ifEngineIsNode',
+        ifEngineIsBrowser: 'bower_components/engineDetector/app/ifEngineIsBrowser'
     }
 } )
 

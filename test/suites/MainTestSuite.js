@@ -1,6 +1,7 @@
 define( [
-    'mangrove-utils/mangrove-utils'
- ], function( mangroveUtils ) {
+    'mangrove-utils/mangrove-utils',
+    'engineDetector/engineDetector'
+ ], function( mangroveUtils, engineDetector ) {
 
     describe( 'mangrove-utils/mangrove-utils', function() {
 
@@ -36,17 +37,18 @@ define( [
         describe( 'dom', function() {
 
 
-            if ( typeof window === 'undefined' )
-                return
+            engineDetector.ifBrowser( function() {
 
-            it( 'should load without blowing', function( done ) {
+                it( 'should load without blowing', function( done ) {
 
-                var domUtils = require( [ 'mangrove-utils/dom/all' ], function( dom ) {
+                    var domUtils = require( [ 'mangrove-utils/dom/all' ], function( dom ) {
 
-                    expect( dom ).to.exist
-                    expect( dom.addEventListener ).to.exist
-                    done()
-                    
+                        expect( dom ).to.exist
+                        expect( dom.addEventListener ).to.exist
+                        done()
+
+                    } )
+
                 } )
 
             } )
