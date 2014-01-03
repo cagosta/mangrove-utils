@@ -640,7 +640,7 @@ define( 'mangrove-utils/treeValue',[],function() {
 
 } );
 /**
- * mangrove-utils version: "0.0.15" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
+ * mangrove-utils version: "0.0.16" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
  * Available via the MIT license.
  * see: http://github.com/cagosta/mangrove-utils for details
  */
@@ -760,6 +760,7 @@ requirejs.config( {
     },
     paths: {
         'mangrove-utils': '.',
+        engineDetector: 'bower_components/engineDetector/app',
         almond: 'bower_components/almond/almond',
         chai: 'bower_components/chai/chai',
         'chai-as-promised': 'bower_components/chai-as-promised/lib/chai-as-promised',
