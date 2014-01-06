@@ -6,22 +6,13 @@ module.exports = function( grunt ) {
 
         grunt.config.set( 'exec.git_add_origin', {
 
-            command: 'git remote add origin git@github.com:cagosta/mangrove-utils.git'
+            command: 'git remote add origin git@github.com:cagosta/SeedHq.git'
 
         } )
 
         grunt.task.run( 'exec:git_add_origin' )
 
     } )
-
-
-    grunt.config.set( 'exec.git_add_dist', {
-
-        command: 'git add dist'
-
-    } )
-
-    grunt.registerTask( 'git:add_dist', [ 'exec:git_add_dist' ] )
 
     grunt.registerTask( 'git:push_set_upstream', function() {
 
@@ -36,6 +27,16 @@ module.exports = function( grunt ) {
     } )
 
 
+    grunt.config.set( 'exec.git_add_dist', {
+
+        command: 'git add dist'
+
+    } )
+
+    grunt.registerTask( 'git:add_dist', [ 'exec:git_add_dist' ] )
+
+
+
     grunt.registerTask( 'git:initial_commit', function() {
 
         grunt.config.set( 'exec.git_initial_commit', {
@@ -48,7 +49,7 @@ module.exports = function( grunt ) {
 
     grunt.registerTask( 'git:create_github_repo', function() {
 
-        var curlCommand = grunt.config.process( 'curl -u \'cagosta\' https://api.github.com/user/repos -d \'{"name":"mangrove-utils"}\'' )
+        var curlCommand = grunt.config.process( 'curl -u \'cagosta\' https://api.github.com/user/repos -d \'{"name":"SeedHq"}\'' )
 
         grunt.config.set( 'exec.git_create_github_repo', {
             command: curlCommand

@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
 
 
     grunt.config.set( 'exec.bower_register', {
-        command: 'bower register mangrove-utils git://github.com/cagosta/mangrove-utils'
+        command: 'bower register SeedHq git://github.com/cagosta/SeedHq'
     } )
 
     grunt.config.set( 'exec.npm_publish', {
