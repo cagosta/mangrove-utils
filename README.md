@@ -33,6 +33,9 @@ And you can find dom helpers at 'mangrove-utils/mangrove-utils/dom/all'
 
 
 
+## Demo ##
+See [cagosta.github.io/mangrove-utils](http://cagosta.github.io/mangrove-utils) 
+
 ## Install ##
 
 mangrove-utils is coded as [amd module](http://requirejs.org/docs/whyamd.html) but can be installed with npm, bower or old-fashioned src=".min.js".
