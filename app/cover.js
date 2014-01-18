@@ -4,15 +4,12 @@ define( function() {
 
         var sonRatio = son[ 1 ] / son[ 0 ],
             parentRatio = parent[ 1 ] / parent[ 0 ],
-            fitWidth = ( sonRatio >= parentRatio ),
-            r,
-            nwidth,
-            nheight;
+            fitWidth = ( sonRatio >= parentRatio );
 
         if ( fitWidth )
-            return [  parent[ 0 ], parent[ 0 ] * son[ 1 ] / son[ 0 ] ]
+            return [  parent[ 0 ], parent[ 0 ] * sonRatio ]
         else
-            return [ parent[ 1 ] * son[ 0 ] / son[ 1 ] , parent[ 1 ] ]
+            return [ parent[ 1 ] / sonRatio , parent[ 1 ] ]
 
     }
 
