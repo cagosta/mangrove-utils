@@ -669,6 +669,25 @@ define( 'mangrove-utils/bindPolyfill',[],function() {
     return Function.prototype.bind
 
 } );
+define( 'mangrove-utils/cover',[],function() {
+
+    return function( parent, son ) {
+
+        var sonRatio = son[ 1 ] / son[ 0 ],
+            parentRatio = parent[ 1 ] / parent[ 0 ],
+            fitWidth = ( sonRatio >= parentRatio ),
+            r,
+            nwidth,
+            nheight;
+
+        if ( fitWidth )
+            return [  parent[ 0 ], parent[ 0 ] * son[ 1 ] / son[ 0 ] ]
+        else
+            return [ parent[ 1 ] * son[ 0 ] / son[ 1 ] , parent[ 1 ] ]
+
+    }
+
+} );
 /**
  * mangrove-utils version: "0.0.24" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
  * Available via the MIT license.
@@ -687,8 +706,9 @@ define( 'mangrove-utils/mangrove-utils',[
     './objectify',
     './serialize',
     './treeValue',
-    './bindPolyfill'
- ], function( clone, eachKey, enumerate, extend, hardClone, is, isArray, merge, objectify, serialize, treeValue, all, bindPolyfill) {
+    './bindPolyfill',
+    './cover'
+ ], function( clone, eachKey, enumerate, extend, hardClone, is, isArray, merge, objectify, serialize, treeValue, bindPolyfill, cover ) {
 
 
     return {
@@ -703,7 +723,8 @@ define( 'mangrove-utils/mangrove-utils',[
         objectify: objectify,
         serialize: serialize,
         treeValue: treeValue,
-        bindPolyfill: bindPolyfill
+        bindPolyfill: bindPolyfill,
+        cover: cover
     }
 } );
 var EngineDetector = function() {
