@@ -16,8 +16,9 @@ define( [
     './objectify',
     './serialize',
     './treeValue',
-    './bindPolyfill'
- ], function( clone, eachKey, enumerate, extend, hardClone, is, isArray, merge, objectify, serialize, treeValue, all, bindPolyfill) {
+    './bindPolyfill',
+    './cover'
+ ], function( clone, eachKey, enumerate, extend, hardClone, is, isArray, merge, objectify, serialize, treeValue, bindPolyfill, cover ) {
 
 
     return {
@@ -32,6 +33,7 @@ define( [
         objectify: objectify,
         serialize: serialize,
         treeValue: treeValue,
-        bindPolyfill: bindPolyfill
+        bindPolyfill: bindPolyfill,
+        cover: cover
     }
 } )
